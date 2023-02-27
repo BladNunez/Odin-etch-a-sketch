@@ -26,3 +26,10 @@ divs.forEach((divColor) =>{
         
 
 })
+
+//create button
+const button = document.createElement('button');
+button.textContent = 'Click Me!'
+button.style.cssText = 'padding: 5px; margin: 8px;'
+container.before(button);
+
