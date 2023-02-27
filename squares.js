@@ -33,3 +33,28 @@ button.textContent = 'Click Me!'
 button.style.cssText = 'padding: 5px; margin: 8px;'
 container.before(button);
 
+//create new matrix function
+function changeMatrix(num){
+        for(let i = 0; i < num; i++){
+                for(let j = 0; j < num; j++){
+                        let squares = document.createElement('div');
+                        squares.style.cssText = 'border-style: solid; border-color: red;';
+                        container.style.cssText = ` grid-template-columns: repeat(${num},10fr); grid-auto-rows: 2em`;
+                        container.appendChild(squares);
+                }
+        }
+
+}
+
+//event listener to remove divs and create new matrix from user input
+button.addEventListener('click', function(e) {
+        let num = Number(window.prompt("Enter # for Column and Row"));
+
+        let divs = document.querySelector('div');
+        divs.innerHTML = " ";
+
+        changeMatrix(num);
+        
+});
+
+
