@@ -13,3 +13,16 @@ divs.forEach((div) =>{
         div.style.cssText = 'border-style: solid; border-color: red;'
 });
 
+//event listeners that use mouse to go over element and change color
+//when leaving color changes back
+divs.forEach((divColor) =>{
+        divColor.addEventListener('mouseenter' , (e) =>{
+                divColor.style.backgroundColor = 'yellow';
+        });
+        
+        divColor.addEventListener('mouseleave' , (e) =>{
+                divColor.style.backgroundColor = 'white';
+        });
+        
+
+})
