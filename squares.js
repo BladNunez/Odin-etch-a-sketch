@@ -54,7 +54,6 @@ button.addEventListener('click', function(e) {
         divs.innerHTML = " ";
 
         changeMatrix(num);
-        
 });
 
 
